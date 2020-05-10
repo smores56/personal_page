@@ -1,0 +1,148 @@
+/*
+  elm-hot creates an additional div wrapper around the app to make HMR possible.
+  This could break styling in development mode if you are using Elm UI.
+
+  More context in the issue:
+    https://github.com/halfzebra/create-elm-app/issues/320
+*/
+[data-elm-hot="true"] {
+  height: inherit;
+}
+
+body {
+  font-family: "Raleway", "Source Sans Pro", "Trebuchet MS", "Lucida Grande",
+    "Bitstream Vera Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  /* text-align: center; */
+  color: #293c4b;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 200px;
+}
+
+.controls {
+  width: 50%;
+}
+
+.sudoku-board {
+  border-collapse: collapse;
+  vertical-align: middle;
+  width: 100%;
+  position: relative;
+  max-width: 400px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sudoku-row {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  justify-content: space-around;
+}
+
+.sudoku-square {
+  font-weight: bold;
+  font-size: 1.7em;
+  text-align: center;
+  vertical-align: middle;
+  flex: 1 0 0px;
+  height: 0px;
+  width: calc(100% / 9);
+  padding-bottom: calc(100% / 9);
+  font-family: sans-serif;
+  border: 1px solid black;
+}
+
+.sudoku-note {
+  font-size: 0.45em;
+}
+
+.input-square {
+  font-weight: bold;
+  font-size: 1.55em;
+  text-align: center;
+  vertical-align: middle;
+  flex: 1 0 0px;
+  height: 0px;
+  width: calc(100% / 10);
+  padding-bottom: calc(100% / 10);
+  font-family: sans-serif;
+  border: 1.5px solid black;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+}
+
+.input-square:nth-child(1) {
+  border-left-width: 3px;
+}
+
+.input-square:nth-child(10) {
+  border-right-width: 3px;
+}
+
+@media (min-width: 400px) {
+  .sudoku-square {
+    font-size: 1.8em;
+  }
+
+  .input-square {
+    font-size: 1.65em;
+  }
+}
+
+@media (min-width: 550px) {
+  .sudoku-square {
+    font-size: 1.15em;
+  }
+
+  .input-square {
+    font-size: 1em;
+  }
+
+  .controls {
+    width: 100%;
+  }
+}
+
+@media (min-width: 750px) {
+  .sudoku-square {
+    font-size: 1.4em;
+  }
+
+  .input-square {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 900px) {
+  .sudoku-square {
+    font-size: 1.7em;
+  }
+
+  .input-square {
+    font-size: 1.7em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .sudoku-square {
+    font-size: 2em;
+  }
+
+  .input-square {
+    font-size: 1.7em;
+  }
+}
