@@ -2,7 +2,7 @@ port module Main exposing (main)
 
 import Browser
 import Browser.Events exposing (onKeyPress)
-import Components.About exposing (about)
+import Components.Sidebar exposing (sidebar)
 import Components.Tabs exposing (TabName(..), tabs)
 import Html exposing (Html, div, h1, text)
 import Html.Attributes exposing (class, style)
@@ -87,7 +87,7 @@ view model =
             ]
         , div [ class "row" ]
             [ div [ class "four columns u-pull-left" ]
-                [ about ]
+                [ sidebar ]
             , div [ class "eight columns" ]
                 [ tabs
                     { currentTab = model.tab

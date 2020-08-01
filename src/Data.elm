@@ -1,4 +1,4 @@
-module Data exposing (Job, Project, Tool, allJobs, allProjects)
+module Data exposing (Job, Project, Tool, allJobs, allProjects, personalLanguages, proficientLanguages)
 
 
 type alias Job =
@@ -22,7 +22,7 @@ type alias Tool =
 
 abbTools : List Tool
 abbTools =
-    [ { name = "Rust", url = "https://www.typescriptlang.org/" }
+    [ { name = "Rust", url = "https://www.rust-lang.org/" }
     , { name = "Docker", url = "https://www.docker.com/" }
     , { name = "Kubernetes", url = "https://kubernetes.io/" }
     , { name = "Cap'n Proto", url = "https://capnproto.org/" }
@@ -141,12 +141,19 @@ sitchTools =
     ]
 
 
-groupPalTools : List Tool
-groupPalTools =
-    [ { name = "Rust", url = "https://www.rust-lang.org/" }
-    , { name = "Serde YAML", url = "https://github.com/dtolnay/serde-yaml" }
-    , { name = "ngrok", url = "https://ngrok.com/" }
-    , { name = "GroupMe API", url = "https://dev.groupme.com/" }
+chesskerTools : List Tool
+chesskerTools =
+    [ { name = "Zig", url = "https://ziglang.org/" }
+    , { name = "mecha (parser combinator)", url = "https://github.com/Hejsil/mecha" }
+    , { name = "Wikipedia", url = "https://en.wikipedia.org/wiki/Rules_of_chess" }
+    ]
+
+
+thisSiteTools : List Tool
+thisSiteTools =
+    [ { name = "Elm", url = "https://elm-lang.org/" }
+    , { name = "Skeleton CSS", url = "http://getskeleton.com/" }
+    , { name = "Tone.js", url = "https://tonejs.github.io/" }
     ]
 
 
@@ -160,13 +167,74 @@ allProjects =
                 ++ "fantastic Rayon library, which easily parallelized network requests and boosted performance about 6 times."
       , toolsUsed = sitchTools
       }
-    , { name = "Group Pal"
-      , github = "https://github.com/smores56/group_pal"
+    , { name = "Chessker"
+      , github = "https://github.com/smores56/chessker"
       , description =
-            "A chatbot that integrated into GroupMe, allowing members to copy/paste messages sent by others for "
-                ++ "quoting your frields. Rather than use Heroku, I took an opportunity to learn how to \"self-host\" using my "
-                ++ "Raspberry Pi and ngrok, a localhost tunneling service. The bot will periodically persist the current copied "
-                ++ "messages to a YAML file for simple persistence. Written in Rust, of course."
-      , toolsUsed = groupPalTools
+            "A terminal app to verify a sequence of chess moves and display the state of the game in your console. "
+                ++ "Born as a marriage between a newfound interest in playing chess with friends online and learning the Zig "
+                ++ "programming language, I have had great success implementing the complex rules chess prescribes with Zig's "
+                ++ "combination of high-level abstractions (generics via compile time evaluation, strict null checks, enum-based "
+                ++ "error handling), and look forward to seeing it rise to popularity."
+      , toolsUsed = chesskerTools
+      }
+    , { name = "This Website"
+      , github = "https://github.com/smores56/personal_page"
+      , description =
+            "My personal page is a testament to my love for the Elm language, and what it affords its users. This website loads "
+                ++ "very quickly with help from Elm's ability to easily eliminate dead code. In addition, Elm's declarative style "
+                ++ "made writing Sudoku a breeze, and the source is extremely simple."
+      , toolsUsed = thisSiteTools
+      }
+    ]
+
+
+proficientLanguages : List Tool
+proficientLanguages =
+    [ { name = "Rust"
+      , url = "https://www.rust-lang.org/"
+      }
+    , { name = "Python"
+      , url = "https://www.python.org/"
+      }
+    , { name = "TypeScript"
+      , url = "https://www.typescriptlang.org/"
+      }
+    , { name = "Elm"
+      , url = "https://elm-lang.org/"
+      }
+    , { name = "Crystal"
+      , url = "https://crystal-lang.org/"
+      }
+    , { name = "Zig"
+      , url = "https://ziglang.org/"
+      }
+    , { name = "C"
+      , url = "https://en.wikipedia.org/wiki/C_(programming_language)"
+      }
+    , { name = "Java"
+      , url = "https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html"
+      }
+    ]
+
+
+personalLanguages : List Tool
+personalLanguages =
+    [ { name = "Pony"
+      , url = "https://www.ponylang.io/"
+      }
+    , { name = "Haskell"
+      , url = "https://www.haskell.org/"
+      }
+    , { name = "Kotlin"
+      , url = "https://kotlinlang.org/"
+      }
+    , { name = "Mint"
+      , url = "https://www.mint-lang.com/"
+      }
+    , { name = "Unison"
+      , url = "https://www.unisonweb.org/"
+      }
+    , { name = "Formality"
+      , url = "https://github.com/moonad/Formality"
       }
     ]

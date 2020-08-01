@@ -25,11 +25,11 @@ projectsTab =
         , p []
             [ text
                 ("The website is written in TypeScript using React Native (previously Elm), and runs on a GraphQL "
-                    ++ "API written in Rust. Check out the repositories for the "
+                    ++ "API written in Crystal. Check out the repositories for the "
                 )
             , a [ href "https://github.com/GleeClub/glubhub_react" ] [ text "frontend" ]
             , text " and the "
-            , a [ href "https://github.com/GleeClub/grease_api" ] [ text "backend" ]
+            , a [ href "https://github.com/smores56/grease_crystal" ] [ text "backend" ]
             , text " to learn more about how and why things are written the way they are."
             ]
         , p []

@@ -30,7 +30,7 @@ onTheSideTab playTheLick playChord sudokuMsg model =
             [ text
                 ("I think that Sudoku needs no explanation. It was fun to implement this all by myself, and "
                     ++ "writing it in Elm (which is what this site is written in) made my life pretty easy. There are 100 "
-                    ++ "random puzzles of varying difficuly, so just hit the \"New Game\" button and have at it!"
+                    ++ "random puzzles of varying difficulty, so just hit the \"New Game\" button and have at it!"
                 )
             ]
         , br [] []
@@ -57,7 +57,7 @@ type alias Chord =
 
 chords : List Chord
 chords =
-    [ { name = "Bb9", notes = [ "Bb2", "Bb3", "F4", "A4", "C5", "D5" ] }
+    [ { name = "Bbmaj9", notes = [ "Bb2", "Bb3", "F4", "A4", "C5", "D5" ] }
     , { name = "Abmaj9#11", notes = [ "Ab3", "Eb4", "G4", "Bb4", "C5", "D5" ] }
     , { name = "Dmaj7/E", notes = [ "E3", "D4", "F#4", "A4", "C#5" ] }
     , { name = "E7#9", notes = [ "E3", "B3", "E4", "G#4", "B4", "D5", "G5" ] }

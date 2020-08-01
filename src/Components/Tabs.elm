@@ -3,6 +3,7 @@ module Components.Tabs exposing (TabName(..), tabs)
 import Components.AtWork exposing (atWorkTab)
 import Components.OnTheSide exposing (onTheSideTab)
 import Components.PersonalProjects exposing (projectsTab)
+import Components.Skills exposing (skillsTab)
 import Html exposing (Html, a, div, li, text, ul)
 import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
@@ -10,7 +11,8 @@ import Sudoku.Game
 
 
 type TabName
-    = TabWork
+    = TabSkills
+    | TabWork
     | TabProjects
     | TabFun
 
@@ -28,6 +30,9 @@ type alias TabContext msg =
 tabLabel : TabName -> String
 tabLabel tab =
     case tab of
+        TabSkills ->
+            "Skills"
+
         TabWork ->
             "Work"
 
@@ -41,6 +46,9 @@ tabLabel tab =
 tabContent : TabContext msg -> TabName -> Html msg
 tabContent context tab =
     case tab of
+        TabSkills ->
+            skillsTab
+
         TabWork ->
             atWorkTab
 
@@ -55,7 +63,7 @@ tabs : TabContext msg -> Html msg
 tabs context =
     let
         allTabs =
-            [ TabWork, TabProjects, TabFun ]
+            [ TabWork, TabProjects, TabSkills, TabFun ]
 
         tabButton tab =
             li []
