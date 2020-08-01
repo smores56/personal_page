@@ -18,8 +18,9 @@ prelude =
         , text "in lots of areas)."
         ]
     , p []
-        [ text "I graduated in 2019 from Georgia Tech with a B.S. in Computer Science, with threads in "
-        , text "intelligence and media. My favorite courses were OS Design and Compilers and Interpreters."
+        [ text "I graduated in 2019 from Georgia Tech with a B.S. in Computer Science earning Highest Honors. "
+        , text "I had concentrations in intelligence and systems/architecture, and my favorite courses were OS "
+        , text "Design and Compilers and Interpreters."
         ]
     , p []
         [ text "I also sing and play music on the side, and love music theory. I can "
